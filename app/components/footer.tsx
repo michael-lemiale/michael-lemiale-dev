@@ -1,4 +1,4 @@
-import { ArrowIcon, GithubIcon, LinkedInIcon } from './icons'
+import { ArrowIcon, GithubIcon, LinkedInIcon } from "./icons";
 
 export default function Footer() {
   return (
@@ -12,7 +12,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/michael-lemiale/"
           >
             <LinkedInIcon />
-            <p className="ml-2 h-7">linkedin</p>
+            <p className="ml-2 h-7">LinkedIn</p>
           </a>
         </li>
         <li>
@@ -23,7 +23,7 @@ export default function Footer() {
             href="https://github.com/michael-lemiale"
           >
             <GithubIcon />
-            <p className="ml-2 h-7">github</p>
+            <p className="ml-2 h-7">GitHub</p>
           </a>
         </li>
         <li>
@@ -40,5 +40,5 @@ export default function Footer() {
         </li>
       </ul>
     </footer>
-  )
+  );
 }
