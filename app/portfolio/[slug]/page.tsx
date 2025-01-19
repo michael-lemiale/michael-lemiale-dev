@@ -77,7 +77,7 @@ export default function Blog({ params }) {
             url: `${baseUrl}/portfolio/${post.slug}`,
             author: {
               '@type': 'Person',
-              name: 'My Portfolio',
+              name: 'Michael Lemiale',
             },
           }),
         }}
