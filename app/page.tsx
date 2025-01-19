@@ -15,7 +15,7 @@ export default function Page() {
         through the tools and processes I have the opportunity to work on.`}
       </h1>
       <h1 className="mb-4 text-xl font-normal">
-        {`Part time, `} <a className="text-blue-600 hover:text-blue-800" target="_blank" href="https://notfromparismusic.com/">I’m a musician.</a>
+        {`Part time, `} <a className="text-blue-600 hover:text-red-400" target="_blank" href="https://notfromparismusic.com/">I’m a musician.</a>
       </h1>
       <div className="my-8">
         <BlogPosts />
