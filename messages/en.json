@@ -1,0 +1,35 @@
+{
+  "Home": {
+    "aboutMe": ["Hi 👋🏻 I'm Michael.", ""]
+  },
+  "portfolio": {
+    "workExperience": {
+      "title": "asdf",
+      "experiences": [{}, {}]
+    }
+  },
+  "NotFoundPage": {
+    "title": "404",
+    "message": "Page not found"
+  },
+  "CV": {
+    "title": "CV",
+    "download": "Download CV"
+  },
+  "HomePage": {
+    "title": "Home",
+    "aboutMe": "About me",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "PortfolioPage": {
+    "title": "Portfolio",
+    "workExperience": "Work Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "LocaleLayout": {
+    "title": "next-intl example"
+  }
+}

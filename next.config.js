@@ -1,11 +1,6 @@
-module.exports = {
-    webpack: (config) => {
-      config.resolve.alias.canvas = false;
-      
-      return config;
-    },
-}
+const withNextIntl = require("next-intl/plugin")();
 
-module.exports = {
-  swcMinify: false,
-}
+/** @type {import('next').NextConfig} */
+const config = {};
+
+module.exports = withNextIntl(config);

@@ -49,8 +49,10 @@ function getMDXData(dir) {
   });
 }
 
-export function getBlogPosts() {
-  return getMDXData(path.join(process.cwd(), "app", "portfolio", "posts"));
+export function getPortfolioPosts() {
+  return getMDXData(
+    path.join(process.cwd(), "src", "app", "[locale]", "portfolio", "posts")
+  );
 }
 
 export function formatDate(date: string, includeRelative = false) {

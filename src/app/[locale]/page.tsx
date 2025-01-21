@@ -1,6 +1,15 @@
-import { BlogPosts } from "app/components/posts";
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 
-export default function Page() {
+type Props = {
+  params: { locale: string };
+};
+
+export default function HomePage({ params: { locale } }: Props) {
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  const t = useTranslations("HomePage");
   return (
     <section>
       <h1 className="mb-4 text-xl font-normal">{`Hi 👋🏻 I'm Michael.\n`}</h1>

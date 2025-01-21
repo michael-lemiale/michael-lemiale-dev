@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
-import { RedTriangleIcon } from "./icons";
+import { RedTriangleIcon } from "./Icons";
 
 const navItems = {
   "/": {

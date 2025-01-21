@@ -1,9 +1,8 @@
-import Link from "next/link";
-import { CustomMDX } from "app/components/mdx";
-import { formatDate, getBlogPosts } from "app/portfolio/utils";
+import { CustomMDX } from "./mdx";
+import { formatDate, getPortfolioPosts } from "@/utils";
 
-export function BlogPosts() {
-  let allBlogs = getBlogPosts();
+export function PortfolioPosts() {
+  let allBlogs = getPortfolioPosts();
 
   return (
     <div>

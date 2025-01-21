@@ -1,20 +1,22 @@
 "use client";
 
+import { useState } from "react";
+import { Document, Page as PDFPage, pdfjs } from "react-pdf";
+import { useWindowWidth } from "@wojtekmaj/react-hooks";
+import { ArrowIcon } from "./Icons";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
-import { useState } from "react";
-import { useWindowWidth } from "@wojtekmaj/react-hooks";
-import { Document, Page as PDFPage, pdfjs } from "react-pdf";
-import { ArrowIcon } from "../components/icons";
-import "react-pdf/dist/Page/TextLayer.css";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
   import.meta.url
 ).toString();
 
-export default function Page(fileName) {
+type Props = {
+  params: { locale: string };
+};
+
+export default function PDFDisplay() {
   const [numPages, setNumPages] = useState(null);
   const width = useWindowWidth() ?? 800;
 

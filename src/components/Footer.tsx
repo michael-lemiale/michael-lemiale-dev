@@ -1,4 +1,4 @@
-import { ArrowIcon, GithubIcon, LinkedInIcon } from "./icons";
+import { ArrowIcon, GithubIcon, LinkedInIcon } from "./Icons";
 
 export default function Footer() {
   return (
