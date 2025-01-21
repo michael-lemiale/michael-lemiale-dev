@@ -1,20 +1,17 @@
 import Link from "next/link";
 import Head from "next/head";
+import { useTranslations } from "next-intl";
+import LocaleSwitcher from "./LocaleSwitcher";
 import { RedTriangleIcon } from "./Icons";
 
-const navItems = {
-  "/": {
-    name: "Home",
-  },
-  "/portfolio": {
-    name: "Portfolio",
-  },
-  "/cv": {
-    name: "CV",
-  },
-};
-
 export function Navbar() {
+  const t = useTranslations("NavBar");
+  const navItems: Array<"home" | "portfolio" | "cv"> = [
+    "home",
+    "portfolio",
+    "cv",
+  ];
+
   return (
     <aside className="-ml-[12px] mb-12 tracking-tight">
       <div>
@@ -53,18 +50,19 @@ export function Navbar() {
             </div>
           </div>
           <div id="nav-row-2" className="flex flex-row">
-            {Object.entries(navItems).map(([path, { name }]) => {
+            {navItems.map((key) => {
               return (
                 <Link
-                  key={path}
-                  href={path}
+                  key={key}
+                  href={t(`${key}.url`)}
                   className="text-2xl font-black transition-all hover:text-red-400 flex align-middle relative mt-6 px-3 mr-2"
                 >
-                  {name}
+                  {t(`${key}.title`)}
                 </Link>
               );
             })}
           </div>
+          <LocaleSwitcher />
         </nav>
       </div>
     </aside>

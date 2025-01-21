@@ -1,11 +1,20 @@
 {
-  "Home": {
-    "aboutMe": ["Hi 👋🏻 I'm Michael.", ""]
-  },
-  "portfolio": {
-    "workExperience": {
-      "title": "asdf",
-      "experiences": [{}, {}]
+  "HomePage": {
+    "hi": {
+      "title": "Salut",
+      "value": "Salut 👋🏻 Je m'appelle Michael."
+    },
+    "dataNerd": {
+      "title": "Passionné de Données",
+      "value": "Je suis un passionné de données et un ingénieur logiciel confirmé spécialisé dans les données et l’analyse. J’ai plusieurs années d’expérience dans la conception et la mise en place d’environnements d’entrepôts de données performants et bien structurés."
+    },
+    "passion": {
+      "title": "Passion",
+      "value": "Ma mission principale est de rendre possible des analyses de haut niveau. Je m’efforce de renforcer les compétences de mes collègues en développant des outils et des processus adaptés aux besoins."
+    },
+    "music": {
+      "title": "Musique",
+      "value": "En dehors du travail, <musicLink>je suis aussi musicien.</musicLink>"
     }
   },
   "NotFoundPage": {
@@ -16,12 +25,6 @@
     "title": "CV",
     "download": "Download CV"
   },
-  "HomePage": {
-    "title": "Home",
-    "aboutMe": "About me",
-    "portfolio": "Portfolio",
-    "contact": "Contact"
-  },
   "PortfolioPage": {
     "title": "Portfolio",
     "workExperience": "Work Experience",
@@ -31,5 +34,15 @@
   },
   "LocaleLayout": {
     "title": "next-intl example"
+  },
+  "LocaleSwitcher": {
+    "title": "Language",
+    "label": "Changer de Langue",
+    "locale": "{locale, select, en {🇺🇸 English} es {🇪🇸 Español} fr {🇫🇷 Français} other {Unknown}}"
+  },
+  "NavBar": {
+    "home": { "title": "Accueil", "url": "/fr" },
+    "portfolio": { "title": "Dossier", "url": "/fr/dossier" },
+    "cv": { "title": "CV", "url": "/fr/cv" }
   }
 }

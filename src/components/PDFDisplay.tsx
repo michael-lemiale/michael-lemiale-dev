@@ -12,10 +12,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url
 ).toString();
 
-type Props = {
-  params: { locale: string };
-};
-
 export default function PDFDisplay() {
   const [numPages, setNumPages] = useState(null);
   const width = useWindowWidth() ?? 800;

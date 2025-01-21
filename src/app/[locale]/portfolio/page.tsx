@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import { PortfolioPosts } from "@/components/PortfolioPosts";
+import { WorkElaborated } from "@/components/WorkElaborated";
 
 type Props = {
   params: { locale: string };
@@ -17,7 +17,7 @@ export default function PortfolioPage({ params: { locale } }: Props) {
         Work Experience - Elaborated
       </h1>
       <hr />
-      <PortfolioPosts />
+      <WorkElaborated />
     </section>
   );
 }

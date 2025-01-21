@@ -1,7 +1,7 @@
-import { CustomMDX } from "./mdx";
+import { CustomMDX } from "./CustomMDX";
 import { formatDate, getPortfolioPosts } from "@/utils";
 
-export function PortfolioPosts() {
+export function WorkElaborated() {
   let allBlogs = getPortfolioPosts();
 
   return (

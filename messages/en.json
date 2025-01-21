@@ -1,11 +1,20 @@
 {
-  "Home": {
-    "aboutMe": ["Hi 👋🏻 I'm Michael.", ""]
-  },
-  "portfolio": {
-    "workExperience": {
-      "title": "asdf",
-      "experiences": [{}, {}]
+  "HomePage": {
+    "hi": {
+      "title": "Hi",
+      "value": "Hi 👋🏻 I'm Michael."
+    },
+    "dataNerd": {
+      "title": "Data Nerd",
+      "value": "I'm a data nerd and experienced software engineer in the data and analytics space. I’ve spent years developing efficient, well architected data warehousing enviornments."
+    },
+    "passion": {
+      "title": "Passion",
+      "value": "My full time passion is enabling world class analytics. I strive to uplift my peers through the tools and processes I have the opportunity to work on."
+    },
+    "music": {
+      "title": "Music",
+      "value": "Part time, <musicLink>I’m a musician.</musicLink>"
     }
   },
   "NotFoundPage": {
@@ -16,20 +25,30 @@
     "title": "CV",
     "download": "Download CV"
   },
-  "HomePage": {
-    "title": "Home",
-    "aboutMe": "About me",
-    "portfolio": "Portfolio",
-    "contact": "Contact"
-  },
   "PortfolioPage": {
     "title": "Portfolio",
-    "workExperience": "Work Experience",
+    "workExperience": {
+      "articulate": {
+        "title": "Articulate",
+        "value": "",
+        "publishedAt": "Published at"
+      }
+    },
     "education": "Education",
     "skills": "Skills",
     "projects": "Projects"
   },
   "LocaleLayout": {
     "title": "next-intl example"
+  },
+  "LocaleSwitcher": {
+    "title": "Language",
+    "label": "Change Language",
+    "locale": "{locale, select, en {🇺🇸 English} es {🇪🇸 Español} fr {🇫🇷 Français} other {Unknown}}"
+  },
+  "NavBar": {
+    "home": { "title": "Home", "url": "/en" },
+    "portfolio": { "title": "Portfolio", "url": "/en/portfolio" },
+    "cv": { "title": "CV", "url": "/en/cv" }
   }
 }

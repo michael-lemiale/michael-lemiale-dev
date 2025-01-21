@@ -1,11 +1,20 @@
 {
-  "Home": {
-    "aboutMe": ["Hi 👋🏻 I'm Michael.", ""]
-  },
-  "portfolio": {
-    "workExperience": {
-      "title": "asdf",
-      "experiences": [{}, {}]
+  "HomePage": {
+    "hi": {
+      "title": "Hola",
+      "value": "¡Hola 👋🏻! Me llamo Michael."
+    },
+    "dataNerd": {
+      "title": "Apasionado de los Datos",
+      "value": "Soy un apasionado de los datos y un ingeniero de software experimentado, especializado en datos y análisis. Tengo varios años de experiencia diseñando e implementando entornos de almacenamiento de datos eficientes y bien estructurados."
+    },
+    "passion": {
+      "title": "Passion",
+      "value": "Mi misión principal es hacer posible un análisis de alto nivel. Me esfuerzo por fortalecer a mis compañeros desarrollando herramientas y procesos que se adapten a sus necesidades."
+    },
+    "music": {
+      "title": "Musica",
+      "value": "Fuera del trabajo, <musicLink>también soy músico.</musicLink>"
     }
   },
   "NotFoundPage": {
@@ -16,12 +25,6 @@
     "title": "CV",
     "download": "Download CV"
   },
-  "HomePage": {
-    "title": "Home",
-    "aboutMe": "About me",
-    "portfolio": "Portfolio",
-    "contact": "Contact"
-  },
   "PortfolioPage": {
     "title": "Portfolio",
     "workExperience": "Work Experience",
@@ -31,5 +34,15 @@
   },
   "LocaleLayout": {
     "title": "next-intl example"
+  },
+  "LocaleSwitcher": {
+    "title": "Language",
+    "label": "Cambiar Idioma",
+    "locale": "{locale, select, en {🇺🇸 English} es {🇪🇸 Español} fr {🇫🇷 Français} other {Unknown}}"
+  },
+  "NavBar": {
+    "home": { "title": "Inicio", "url": "/es" },
+    "portfolio": { "title": "Dossier", "url": "/es/dossier" },
+    "cv": { "title": "CV", "url": "/es/cv" }
   }
 }
