@@ -54,12 +54,7 @@ type Props = {
 };
 
 export function getPortfolioPosts(locale: Props) {
-  return getMDXData(
-    path.join(
-      process.cwd(),
-      `src/app/[locale]/portfolio/posts/${locale["locale"]}`
-    )
-  );
+  return getMDXData(path.join(process.cwd(), `src/posts/${locale["locale"]}`));
 }
 
 export function formatDate(
