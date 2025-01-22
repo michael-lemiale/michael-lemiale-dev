@@ -55,13 +55,9 @@ type Props = {
 
 export function getPortfolioPosts(locale: Props) {
   return getMDXData(
-    path.resolve(
-      "src",
-      "app",
-      "[locale]",
-      "portfolio",
-      "posts",
-      locale["locale"]
+    path.join(
+      process.cwd(),
+      `src/app/[locale]/portfolio/posts/${locale["locale"]}`
     )
   );
 }
