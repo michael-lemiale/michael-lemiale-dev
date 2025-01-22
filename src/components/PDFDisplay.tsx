@@ -7,10 +7,7 @@ import { ArrowIcon } from "./Icons";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
-).toString();
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
 type Props = {
   locale: string;
@@ -28,7 +25,7 @@ export default function PDFDisplay({
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
-  console.log("\n\n" + locale["locale"]);
+
   return (
     <section className="w-fit">
       <a
