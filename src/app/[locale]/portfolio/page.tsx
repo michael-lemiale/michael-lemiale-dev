@@ -14,10 +14,10 @@ export default function PortfolioPage({ params: { locale } }: Props) {
   return (
     <section>
       <h1 className="font-bold title text-4xl mb-1 tracking-tighter">
-        Work Experience - Elaborated
+        {t("workExperience.value")}
       </h1>
       <hr />
-      <WorkElaborated />
+      <WorkElaborated locale={locale} />
     </section>
   );
 }

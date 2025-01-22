@@ -1,8 +1,12 @@
 import { CustomMDX } from "./CustomMDX";
 import { formatDate, getPortfolioPosts } from "@/utils";
 
-export function WorkElaborated() {
-  let allBlogs = getPortfolioPosts();
+type Props = {
+  locale: string;
+};
+
+export function WorkElaborated(locale: Props) {
+  let allBlogs = getPortfolioPosts(locale);
 
   return (
     <div>
@@ -23,7 +27,7 @@ export function WorkElaborated() {
               </h1>
               <div className="items-start mt-2">
                 <p className="text-normal text-neutral-600 dark:text-neutral-400">
-                  {formatDate(post.metadata.publishedAt)}
+                  {formatDate(locale, post.metadata.publishedAt)}
                 </p>
               </div>
             </div>

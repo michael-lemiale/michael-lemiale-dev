@@ -49,13 +49,29 @@ function getMDXData(dir) {
   });
 }
 
-export function getPortfolioPosts() {
+type Props = {
+  locale: string;
+};
+
+export function getPortfolioPosts(locale: Props) {
   return getMDXData(
-    path.join(process.cwd(), "src", "app", "[locale]", "portfolio", "posts")
+    path.join(
+      process.cwd(),
+      "src",
+      "app",
+      "[locale]",
+      "portfolio",
+      "posts",
+      locale["locale"]
+    )
   );
 }
 
-export function formatDate(date: string, includeRelative = false) {
+export function formatDate(
+  locale: Props,
+  date: string,
+  includeRelative = false
+) {
   let currentDate = new Date();
   if (!date.includes("T")) {
     date = `${date}T00:00:00`;
@@ -78,7 +94,7 @@ export function formatDate(date: string, includeRelative = false) {
     formattedDate = "Today";
   }
 
-  let fullDate = targetDate.toLocaleString("en-us", {
+  let fullDate = targetDate.toLocaleString(locale["locale"], {
     month: "long",
     year: "numeric",
   });

@@ -18,21 +18,18 @@
     }
   },
   "NotFoundPage": {
-    "title": "404",
-    "message": "Page not found"
+    "title": "404 - Not Found",
+    "message": "The resource you're looking for doesn't exist."
   },
   "CV": {
     "title": "CV",
-    "download": "Download CV"
+    "value": "Download CV"
   },
   "PortfolioPage": {
     "title": "Portfolio",
     "workExperience": {
-      "articulate": {
-        "title": "Articulate",
-        "value": "",
-        "publishedAt": "Published at"
-      }
+      "title:": "Work Experience",
+      "value": "Work Experience - Elaborated"
     },
     "education": "Education",
     "skills": "Skills",
@@ -50,5 +47,9 @@
     "home": { "title": "Home", "url": "/en" },
     "portfolio": { "title": "Portfolio", "url": "/en/portfolio" },
     "cv": { "title": "CV", "url": "/en/cv" }
+  },
+  "Footer": {
+    "title": "Footer",
+    "value": "Download CV"
   }
 }

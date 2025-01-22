@@ -12,14 +12,23 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url
 ).toString();
 
-export default function PDFDisplay() {
+type Props = {
+  locale: string;
+  downloadStringLocalalized: string;
+};
+
+export default function PDFDisplay({
+  locale,
+  downloadStringLocalalized,
+}: Props) {
   const [numPages, setNumPages] = useState(null);
   const width = useWindowWidth() ?? 800;
+  const localePDF = "/" + locale + "-cv-michael-lemiale-2025.pdf";
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
-
+  console.log("\n\n" + locale["locale"]);
   return (
     <section className="w-fit">
       <a
@@ -27,16 +36,13 @@ export default function PDFDisplay() {
         rel="noopener noreferrer"
         download
         target="_blank"
-        href="/michael-lemiale-resume-2025.pdf"
+        href={localePDF}
       >
         <ArrowIcon />
-        <p className="ml-2 h-7">Download CV</p>
+        <p className="ml-2 h-7">{downloadStringLocalalized}</p>
       </a>
       <div className="border-1 border-solid border-red-600 w-fit">
-        <Document
-          file="/michael-lemiale-resume-2025.pdf"
-          onLoadSuccess={onDocumentLoadSuccess}
-        >
+        <Document file={localePDF} onLoadSuccess={onDocumentLoadSuccess}>
           {Array.from(new Array(numPages), (el, index) => (
             <PDFPage
               key={`page_${index + 1}`}

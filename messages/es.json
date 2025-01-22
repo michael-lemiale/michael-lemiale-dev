@@ -18,19 +18,19 @@
     }
   },
   "NotFoundPage": {
-    "title": "404",
-    "message": "Page not found"
+    "title": "404 - No Encontrado",
+    "message": "El recurso que buscas no existe."
   },
   "CV": {
     "title": "CV",
-    "download": "Download CV"
+    "value": "Descargar el CV"
   },
   "PortfolioPage": {
     "title": "Portfolio",
-    "workExperience": "Work Experience",
-    "education": "Education",
-    "skills": "Skills",
-    "projects": "Projects"
+    "workExperience": {
+      "title:": "Work Experience",
+      "value": "Experiencia Laboral - Elaborada"
+    }
   },
   "LocaleLayout": {
     "title": "next-intl example"
@@ -44,5 +44,9 @@
     "home": { "title": "Inicio", "url": "/es" },
     "portfolio": { "title": "Dossier", "url": "/es/dossier" },
     "cv": { "title": "CV", "url": "/es/cv" }
+  },
+  "Footer": {
+    "title": "Footer",
+    "value": "Descargar el CV"
   }
 }

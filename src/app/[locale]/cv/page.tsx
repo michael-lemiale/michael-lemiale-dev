@@ -1,8 +1,18 @@
 import { useTranslations } from "next-intl";
 import PDFDisplay from "@/components/PDFDisplay";
 
-export default function FAQEntry() {
-  const t = useTranslations("CV");
+type Props = {
+  params: { locale: string };
+};
 
-  return <PDFDisplay />;
+export default function CVPage(locale: Props) {
+  const t = useTranslations("CV");
+  const downloadStringLocalalized = t("value");
+
+  return (
+    <PDFDisplay
+      locale={locale.params.locale}
+      downloadStringLocalalized={downloadStringLocalalized}
+    />
+  );
 }

@@ -1,6 +1,8 @@
+import { useTranslations } from "next-intl";
 import { ArrowIcon, GithubIcon, LinkedInIcon } from "./Icons";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
   return (
     <footer className="mb-16">
       <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
@@ -35,7 +37,7 @@ export default function Footer() {
             href="/michael-lemiale-resume-2025.pdf"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">Download CV</p>
+            <p className="ml-2 h-7">{t("value")}</p>
           </a>
         </li>
       </ul>
