@@ -5,8 +5,8 @@ type Props = {
   locale: string;
 };
 
-export function WorkElaborated(locale: Props) {
-  let allBlogs = getPortfolioPosts(locale, "work");
+export function Education(locale: Props) {
+  let allBlogs = getPortfolioPosts(locale, "education");
 
   return (
     <div>

@@ -6,6 +6,7 @@ type Metadata = {
   publishedAt: string;
   summary: string;
   image?: string;
+  url?: string;
 };
 
 function parseFrontmatter(fileContent: string) {
@@ -53,8 +54,10 @@ type Props = {
   locale: string;
 };
 
-export function getPortfolioPosts(locale: Props) {
-  return getMDXData(path.join(process.cwd(), `src/posts/${locale["locale"]}`));
+export function getPortfolioPosts(locale: Props, section: string) {
+  return getMDXData(
+    path.join(process.cwd(), `src/posts/${locale["locale"]}/${section}`)
+  );
 }
 
 export function formatDate(

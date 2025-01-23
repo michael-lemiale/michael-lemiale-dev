@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 
@@ -30,6 +31,13 @@ export default function HomePage({ params: { locale } }: Props) {
             : t(`${key}.value`)}
         </h1>
       ))}
+      <Image
+        src="/michael-lemiale-headshot.jpeg"
+        alt="Michael Lemiale"
+        className="justify-self-start"
+        width={400}
+        height={600}
+      />
     </section>
   );
 }

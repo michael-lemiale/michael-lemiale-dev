@@ -30,6 +30,14 @@
     "workExperience": {
       "title:": "Work Experience",
       "value": "Experiencia Laboral - Elaborada"
+    },
+    "education": {
+      "title": "Educación",
+      "value": "Educación - Elaborada"
+    },
+    "projects": {
+      "title": "Proyectos",
+      "value": "Proyectos"
     }
   },
   "LocaleLayout": {

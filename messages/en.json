@@ -31,9 +31,14 @@
       "title:": "Work Experience",
       "value": "Work Experience - Elaborated"
     },
-    "education": "Education",
-    "skills": "Skills",
-    "projects": "Projects"
+    "education": {
+      "title": "Education",
+      "value": "Education - Elaborated"
+    },
+    "projects": {
+      "title": "Projects",
+      "value": "Projects"
+    }
   },
   "LocaleLayout": {
     "title": "next-intl example"
