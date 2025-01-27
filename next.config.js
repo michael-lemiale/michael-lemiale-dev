@@ -8,5 +8,5 @@ module.exports = withNextIntl({
     config.resolve.alias.canvas = false;
     return config;
   },
-  swcMinify: false,
+  transpilePackages: ["next-mdx-remote"],
 });
