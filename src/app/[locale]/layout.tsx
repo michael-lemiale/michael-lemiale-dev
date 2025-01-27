@@ -7,12 +7,11 @@ import { routing } from "@/i18n/routing";
 
 type Props = {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata({
-  params: { locale },
-}: Omit<Props, "children">) {
+export async function generateMetadata({ params }: Omit<Props, "children">) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "LocaleLayout" });
 
   return {
@@ -45,14 +44,14 @@ export async function generateMetadata({
   };
 }
 
-export default function RootLayout({ children, params: { locale } }: Props) {
-  // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+export default async function RootLayout({ children, params }: Props) {
+  const locale = await params; // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(locale.locale as any)) {
     notFound();
   }
 
   // Enable static rendering
-  setRequestLocale(locale);
+  setRequestLocale(locale.locale);
 
-  return <BaseLayout locale={locale}>{children}</BaseLayout>;
+  return <BaseLayout locale={locale.locale}>{children}</BaseLayout>;
 }

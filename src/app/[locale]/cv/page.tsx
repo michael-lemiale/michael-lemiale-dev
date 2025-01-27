@@ -1,17 +1,18 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import PDFDisplay from "@/components/PDFDisplay";
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export default function CVPage(locale: Props) {
-  const t = useTranslations("CV");
+export default async function CVPage({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations("CV");
   const downloadStringLocalalized = t("value");
 
   return (
     <PDFDisplay
-      locale={locale.params.locale}
+      locale={locale}
       downloadStringLocalalized={downloadStringLocalalized}
     />
   );

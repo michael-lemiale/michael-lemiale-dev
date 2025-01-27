@@ -1,16 +1,16 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export default function HomePage({ params: { locale } }: Props) {
+export default async function HomePage({ params }: Props) {
+  const locale = await params;
   // Enable static rendering
-  setRequestLocale(locale);
+  setRequestLocale(locale.locale);
 
-  const t = useTranslations("HomePage");
+  const t = await getTranslations("HomePage");
   const keys = ["hi", "dataNerd", "passion", "music"] as const;
   return (
     <section>
