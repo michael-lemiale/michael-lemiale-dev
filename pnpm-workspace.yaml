@@ -2,4 +2,5 @@ packages:
   - .
 
 ignoredBuiltDependencies:
-  - "@vercel/speed-insights"
+  - '@swc/core'
+  - '@vercel/speed-insights'
