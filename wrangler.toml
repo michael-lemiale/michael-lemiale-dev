@@ -1,5 +1,7 @@
 name = "michael-lemiale-dev"
 compatibility_date = "2026-04-23"
+main = ".svelte-kit/cloudflare/_worker.js"
 
-[site]
-bucket = "./build"
+[assets]
+directory = ".svelte-kit/cloudflare"
+binding = "ASSETS"
