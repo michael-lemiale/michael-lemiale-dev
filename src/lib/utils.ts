@@ -55,7 +55,8 @@ export function getPortfolioPosts(locale: string, section: string): Post[] {
 	return getMDXData(path.join(process.cwd(), `src/posts/${locale}/${section}`));
 }
 
-export function formatDate(locale: string, date: string, includeRelative = false): string {
+export function formatDate(locale: string, date?: string, includeRelative = false): string {
+	if (!date) return '';
 	const currentDate = new Date();
 	if (!date.includes('T')) {
 		date = `${date}T00:00:00`;

@@ -11,7 +11,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		const posts = getPortfolioPosts(locale, section);
 		const processed = await Promise.all(
 			posts
-				.sort((a, b) => (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt) ? -1 : 1))
+				.sort((a, b) => (new Date(a.metadata.publishedAt || 0) > new Date(b.metadata.publishedAt || 0) ? -1 : 1))
 				.map(async (post) => ({
 					...post,
 					html: await renderMarkdown(post.content),

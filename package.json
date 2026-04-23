@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "svelte-kit sync && vite build",
     "preview": "vite preview",
     "generate:pdfs": "vite preview & echo $! > .preview.pid && sleep 3 && node scripts/generate-cv-pdfs.js; kill $(cat .preview.pid) 2>/dev/null || true; rm -f .preview.pid",
     "deploy": "bun run build && wrangler pages deploy build"
