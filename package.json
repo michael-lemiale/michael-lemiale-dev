@@ -23,16 +23,17 @@
     "unified": "^11.0.5"
   },
   "devDependencies": {
+    "@sveltejs/adapter-cloudflare": "^7.2.8",
     "@sveltejs/adapter-static": "^3.0.10",
     "@sveltejs/kit": "^2.57.1",
     "@sveltejs/vite-plugin-svelte": "^5.1.1",
     "@tailwindcss/postcss": "^4.2.4",
     "playwright": "^1.59.1",
-    "wrangler": "^4.84.1",
     "postcss": "^8.5.10",
     "svelte": "^5.55.4",
     "tailwindcss": "^4.2.4",
     "typescript": "^5.9.3",
-    "vite": "^6.4.2"
+    "vite": "^6.4.2",
+    "wrangler": "^4.84.1"
   }
 }
