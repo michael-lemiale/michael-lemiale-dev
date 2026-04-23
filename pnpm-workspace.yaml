@@ -1,6 +1,0 @@
-packages:
-  - .
-
-ignoredBuiltDependencies:
-  - '@swc/core'
-  - '@vercel/speed-insights'

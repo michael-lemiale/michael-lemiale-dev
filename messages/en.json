@@ -6,11 +6,11 @@
     },
     "dataNerd": {
       "title": "Data Nerd",
-      "value": "I'm a data nerd and experienced software engineer in the data and analytics space. I’ve spent years developing efficient, well architected data warehousing enviornments."
+      "value": "Experienced software engineer in the data and analytics space. I specialize in building the infrastructure and tooling that empowers data teams to scale."
     },
     "passion": {
       "title": "Passion",
-      "value": "My full time passion is enabling world class analytics. I strive to uplift my peers through the tools and processes I have the opportunity to work on."
+      "value": "My goal is simple: leave the codebase (and the team culture) better than I found it."
     },
     "music": {
       "title": "Music",
@@ -23,21 +23,31 @@
   },
   "CV": {
     "title": "CV",
-    "value": "Download CV"
+    "value": "Download CV",
+    "sections": {
+      "summary": "Professional Summary",
+      "experience": "Work Experience",
+      "education": "Education",
+      "skills": "Skills"
+    },
+    "skillLabels": {
+      "programming": "Programming",
+      "frameworks": "Frameworks & Tools",
+      "cloud": "Cloud",
+      "analytics": "Analytics & BI",
+      "databases": "Databases",
+      "languages": "Languages"
+    }
   },
   "PortfolioPage": {
     "title": "Portfolio",
-    "workExperience": {
-      "title:": "Work Experience",
-      "value": "Work Experience - Elaborated"
-    },
-    "education": {
-      "title": "Education",
-      "value": "Education - Elaborated"
-    },
     "projects": {
       "title": "Projects",
       "value": "Projects"
+    },
+    "personal": {
+      "title": "Personal Life",
+      "value": "Personal Life, etc."
     }
   },
   "LocaleLayout": {

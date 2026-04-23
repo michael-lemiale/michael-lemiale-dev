@@ -1,0 +1,249 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+::selection {
+  background-color: #3e8fb0;
+  color: #faf4ed;
+}
+
+/* ── Rosé Pine Dawn (light) ── */
+:root {
+  --rp-base: #faf4ed;
+  --rp-surface: #fffaf3;
+  --rp-overlay: #f2e9e1;
+  --rp-muted: #9893a5;
+  --rp-subtle: #797593;
+  --rp-text: #575279;
+  --rp-love: #b4637a;
+  --rp-gold: #ea9d34;
+  --rp-rose: #d7827e;
+  --rp-pine: #286983;
+  --rp-foam: #56949f;
+  --rp-iris: #907aa9;
+  --rp-highlight-low: #f4ede8;
+  --rp-highlight-med: #dfdad9;
+  --rp-highlight-high: #cecacd;
+
+  --sh-class: #286983;
+  --sh-identifier: #575279;
+  --sh-sign: #9893a5;
+  --sh-string: #56949f;
+  --sh-keyword: #b4637a;
+  --sh-comment: #9893a5;
+  --sh-jsxliterals: #907aa9;
+  --sh-property: #ea9d34;
+  --sh-entity: #d7827e;
+  --font-sans: 'Geist Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+
+  color-scheme: light;
+}
+
+/* ── Rosé Pine Moon (dark) ── */
+.dark {
+  --rp-base: #232136;
+  --rp-surface: #2a273f;
+  --rp-overlay: #393552;
+  --rp-muted: #6e6a86;
+  --rp-subtle: #908caa;
+  --rp-text: #e0def4;
+  --rp-love: #eb6f92;
+  --rp-gold: #f6c177;
+  --rp-rose: #ea9a97;
+  --rp-pine: #3e8fb0;
+  --rp-foam: #9ccfd8;
+  --rp-iris: #c4a7e7;
+  --rp-highlight-low: #2a283e;
+  --rp-highlight-med: #44415a;
+  --rp-highlight-high: #56526e;
+
+  --sh-class: #3e8fb0;
+  --sh-identifier: #e0def4;
+  --sh-sign: #908caa;
+  --sh-string: #9ccfd8;
+  --sh-keyword: #eb6f92;
+  --sh-comment: #6e6a86;
+  --sh-jsxliterals: #c4a7e7;
+  --sh-property: #f6c177;
+  --sh-entity: #ea9a97;
+
+  color-scheme: dark;
+}
+
+html {
+  min-width: 360px;
+  font-family: var(--font-sans);
+  background-color: var(--rp-base);
+  color: var(--rp-text);
+}
+
+body {
+  background-color: var(--rp-base);
+  color: var(--rp-text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+.prose .anchor {
+  @apply absolute invisible no-underline;
+
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  @apply visible;
+}
+
+.prose a {
+  @apply underline transition-all underline-offset-2 decoration-[0.1em];
+  color: var(--rp-pine);
+  text-decoration-color: var(--rp-highlight-high);
+}
+
+.prose a:hover {
+  color: var(--rp-love);
+}
+
+.prose .anchor:after {
+  color: var(--rp-muted);
+  content: '#';
+}
+
+.prose *:hover > .anchor {
+  @apply visible;
+}
+
+.prose pre {
+  @apply rounded-lg overflow-x-auto py-2 px-3 text-sm;
+  background-color: var(--rp-surface);
+  border: 1px solid var(--rp-highlight-med);
+}
+
+.prose code {
+  @apply px-1 py-0.5 rounded-lg;
+}
+
+.prose pre code {
+  @apply p-0;
+  border: initial;
+  line-height: 1.5;
+}
+
+.prose code span {
+  @apply font-medium;
+}
+
+.prose img {
+  @apply m-0;
+}
+
+.prose p {
+  @apply my-4;
+  color: var(--rp-text);
+}
+
+.prose h1 {
+  @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+}
+
+.prose h2 {
+  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+}
+
+.prose h3 {
+  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+}
+
+.prose h4 {
+  @apply text-lg font-medium tracking-tight mt-6 mb-2;
+}
+
+.prose strong {
+  @apply font-medium;
+}
+
+.prose ul {
+  @apply list-disc pl-6;
+}
+
+.prose ol {
+  @apply list-decimal pl-6;
+}
+
+.prose > :first-child {
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+input[type='text'],
+input[type='email'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+table {
+  display: block;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+hr {
+  border-color: var(--rp-highlight-med);
+}
+
+select {
+  color: var(--rp-text);
+}
+
+select option {
+  background-color: var(--rp-surface);
+  color: var(--rp-text);
+}
+
+.title {
+  text-wrap: balance;
+}
+
+/* ── Print/PDF Styles ── */
+@media print {
+  .navbar,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body,
+  .antialiased,
+  main,
+  .resume {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .resume-header,
+  .section,
+  .company-block,
+  .role-block {
+    page-break-inside: avoid;
+  }
+}

@@ -6,15 +6,15 @@
     },
     "dataNerd": {
       "title": "Apasionado de los Datos",
-      "value": "Soy un apasionado de los datos y un ingeniero de software experimentado, especializado en datos y análisis. Tengo varios años de experiencia diseñando e implementando entornos de almacenamiento de datos eficientes y bien estructurados."
+      "value": "Ingeniero de software con experiencia en el sector de datos y analítica. Me especializo en la creación de infraestructura y herramientas que permiten a los equipos de datos escalar."
     },
     "passion": {
       "title": "Passion",
-      "value": "Mi misión principal es hacer posible un análisis de alto nivel. Me esfuerzo por fortalecer a mis compañeros desarrollando herramientas y procesos que se adapten a sus necesidades."
+      "value": "Mi objetivo es sencillo: dejar el código (y la cultura del equipo) mejor de lo que los encontré"
     },
     "music": {
       "title": "Musica",
-      "value": "Fuera del trabajo, <musicLink>también soy músico.</musicLink>"
+      "value": "En mi tiempo libre, <musiclink>soy músico.</musiclink>"
     }
   },
   "NotFoundPage": {
@@ -23,21 +23,31 @@
   },
   "CV": {
     "title": "CV",
-    "value": "Descargar el CV"
+    "value": "Descargar el CV",
+    "sections": {
+      "summary": "Resumen Profesional",
+      "experience": "Experiencia Laboral",
+      "education": "Educación",
+      "skills": "Habilidades"
+    },
+    "skillLabels": {
+      "programming": "Programación",
+      "frameworks": "Frameworks y Herramientas",
+      "cloud": "Cloud",
+      "analytics": "Analítica y BI",
+      "databases": "Bases de datos",
+      "languages": "Idiomas"
+    }
   },
   "PortfolioPage": {
     "title": "Portfolio",
-    "workExperience": {
-      "title:": "Work Experience",
-      "value": "Experiencia Laboral - Elaborada"
-    },
-    "education": {
-      "title": "Educación",
-      "value": "Educación - Elaborada"
-    },
     "projects": {
       "title": "Proyectos",
       "value": "Proyectos"
+    },
+    "personal": {
+      "title": "Vida Personal",
+      "value": "Vida Personal, etc."
     }
   },
   "LocaleLayout": {

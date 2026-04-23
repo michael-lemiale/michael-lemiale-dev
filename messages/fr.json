@@ -6,15 +6,15 @@
     },
     "dataNerd": {
       "title": "Passionné de Données",
-      "value": "Je suis un passionné de données et un ingénieur logiciel confirmé spécialisé dans les données et l’analyse. J’ai plusieurs années d’expérience dans la conception et la mise en place d’environnements d’entrepôts de données performants et bien structurés."
+      "value": "Ingénieur logiciel expérimenté dans le domaine des données et de l'analyse, je me spécialise dans la création d'infrastructures et d'outils permettant aux équipes data de monter en charge."
     },
     "passion": {
       "title": "Passion",
-      "value": "Ma mission principale est de rendre possible des analyses de haut niveau. Je m’efforce de renforcer les compétences de mes collègues en développant des outils et des processus adaptés aux besoins."
+      "value": "Mon objectif est simple : laisser le code (et la culture d'équipe) dans un meilleur état que celui où je l'ai trouvé"
     },
     "music": {
       "title": "Musique",
-      "value": "En dehors du travail, <musicLink>je suis aussi musicien.</musicLink>"
+      "value": "À mes heures perdues, <musiclink>je suis musicien.</musiclink>"
     }
   },
   "NotFoundPage": {
@@ -23,21 +23,31 @@
   },
   "CV": {
     "title": "CV",
-    "value": "Télécharger le CV"
+    "value": "Télécharger le CV",
+    "sections": {
+      "summary": "Résumé Professionnel",
+      "experience": "Expérience Professionnelle",
+      "education": "Formation",
+      "skills": "Compétences"
+    },
+    "skillLabels": {
+      "programming": "Programmation",
+      "frameworks": "Frameworks & Outils",
+      "cloud": "Cloud",
+      "analytics": "Analytique & BI",
+      "databases": "Bases de données",
+      "languages": "Langues"
+    }
   },
   "PortfolioPage": {
     "title": "Portfolio",
-    "workExperience": {
-      "title:": "Work Experience",
-      "value": "Expérience Professionnelle - Détaillée"
-    },
-    "education": {
-      "title": "Éducation",
-      "value": "Éducation - Détaillée"
-    },
     "projects": {
       "title": "Projets",
       "value": "Projets"
+    },
+    "personal": {
+      "title": "Vie Personnelle",
+      "value": "Vie Personnelle, etc."
     }
   },
   "LocaleLayout": {
