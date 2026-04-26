@@ -6,6 +6,8 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import { highlight } from 'sugar-high';
 import type { Root, Element, Text } from 'hast';
+
+type RawNode = { type: 'raw'; value: string };
 import type { Plugin } from 'unified';
 
 const rehypeHighlightCode: Plugin<[], Root> = () => {
@@ -15,7 +17,7 @@ const rehypeHighlightCode: Plugin<[], Root> = () => {
 				const child = node.children[0];
 				if (child.type === 'text') {
 					const highlighted = highlight(child.value);
-					node.children = [{ type: 'raw', value: highlighted } as unknown as Text];
+					node.children = [{ type: 'raw', value: highlighted } as RawNode as unknown as Text];
 				}
 			}
 		});
@@ -52,7 +54,7 @@ function visit(tree: Root | Element, fn: (node: Element) => void) {
 
 const processor = unified()
 	.use(remarkParse)
-	.use(remarkRehype, { allowDangerousHtml: true })
+	.use(remarkRehype, { allowDangerousHtml: false })
 	.use(rehypeSlug)
 	.use(rehypeAutolinkHeadings, {
 		behavior: 'prepend',

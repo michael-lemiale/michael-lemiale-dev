@@ -17,7 +17,7 @@
 <header class="navbar">
 	<nav class="navbar-inner">
 		<!-- Brand -->
-		<a href={t(messages, 'NavBar', 'home.url')} class="brand">
+		<a href={t(messages, 'NavBar', 'home.url')} class="brand" aria-label="Michael Lemiale - Home">
 			<span class="brand-icon"><Icons icon="redTriangle" /></span>
 			<div class="brand-text">
 				<span class="brand-name">Michael Lemiale</span>

@@ -66,8 +66,13 @@
 
   import Icons from "./Icons.svelte";
 
-  function boldify(text: string): string {
-    return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  function boldify(text: string): { text: string; bold: boolean }[] {
+    const segments: { text: string; bold: boolean }[] = [];
+    const parts = text.split(/\*\*(.*?)\*\*/g);
+    for (let i = 0; i < parts.length; i++) {
+      if (parts[i]) segments.push({ text: parts[i], bold: i % 2 === 1 });
+    }
+    return segments;
   }
 </script>
 
@@ -111,7 +116,7 @@
             </div>
             <ul class="role-bullets">
               {#each role.bullets as bullet}
-                <li>{@html boldify(bullet)}</li>
+                <li>{#each boldify(bullet) as seg}{#if seg.bold}<strong>{seg.text}</strong>{:else}{seg.text}{/if}{/each}</li>
               {/each}
             </ul>
           </div>

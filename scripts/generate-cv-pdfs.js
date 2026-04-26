@@ -39,7 +39,17 @@ async function addBackground(pdfBytes) {
 	return outDoc.save();
 }
 
+async function assertServerReachable() {
+	try {
+		await fetch(BASE_URL);
+	} catch {
+		console.error(`Error: Local server not running at ${BASE_URL}`);
+		process.exit(1);
+	}
+}
+
 async function generatePDFs() {
+	await assertServerReachable();
 	console.log('🚀 Starting PDF generation...');
 
 	const browser = await chromium.launch({ headless: true });
